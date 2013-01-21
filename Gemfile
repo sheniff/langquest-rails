@@ -7,6 +7,9 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
+gem 'activeadmin'
+gem "meta_search", '>= 1.1.0.pre'
+gem 'haml'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -14,6 +17,7 @@ group :development, :test do
   gem 'guard-rspec', '1.2.1'
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
+  gem 'annotate', '2.5.0', group: :development
 end
 
 # Gems used only for assets and not required
