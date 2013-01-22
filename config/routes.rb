@@ -5,6 +5,13 @@ Langquest::Application.routes.draw do
 
   root :to => 'home#index'
 
+  # API
+  namespace :api do
+    namespace :core, defaults: { format: 'json' } do
+      get 'vocabulary'
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
