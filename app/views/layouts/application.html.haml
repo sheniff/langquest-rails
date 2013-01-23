@@ -1,0 +1,12 @@
+!!! 5
+%html{ :"ng-app" => "trivialModule" }
+  %head
+    %title Langquest
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = yield :extra_js
+    = csrf_meta_tags
+  %body
+    %p.notice= notice
+    %p.alert= alert
+    = yield

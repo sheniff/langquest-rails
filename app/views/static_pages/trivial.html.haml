@@ -1,0 +1,16 @@
+- content_for :extra_js do
+  = javascript_include_tag "angular"
+
+.trivial{ :"ng-controller" => "TrivialController" }
+  %h1 Chusco Trivial
+  #data
+    .score
+      Score: {{ player.score || 0 }}
+    .badges
+      {{ player.badges.length || 0 }} badges earned
+      %ul
+        %li{ :"ng-repeat" => "badge in player.badges"}
+          {{ badge.name }}
+
+    .board{ :style => "width: {{board.size}}px; height: {{board.size}}px; border-radius: {{board.size}}px;" }
+      .tile{ :"ng-repeat" => "tile in board.tiles", :style => "{{ $index | tile_style: {bg_color: tiles[tile.type].color, board_size: board.size, num_tiles: board.tiles.length, tile_sizes: tile_size, tile_badge: tile.badge} }}", :"ng-class" => "{big: tile.badge}" }

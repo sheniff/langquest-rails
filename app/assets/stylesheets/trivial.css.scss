@@ -1,0 +1,31 @@
+
+.trivial {
+
+  .board {
+    position: relative;
+    border: 1px solid;
+    margin-left: 100px;
+  }
+
+  .tile {
+    border: 1px solid #000;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+
+    &.big {
+      height: 50px;
+      width: 50px;
+      z-index: 1;
+    }
+  }
+
+
+
+
+}

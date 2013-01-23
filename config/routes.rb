@@ -3,7 +3,8 @@ Langquest::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  root :to => 'home#index'
+  root              to: 'static_pages#home'
+  match '/trivial', to: 'static_pages#trivial'
 
   # API
   namespace :api do
