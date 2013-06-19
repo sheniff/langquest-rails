@@ -1,13 +1,4 @@
 angular.module("trivialModule", [])
-  .filter("tile_top", ->
-    (tile_index, extra) ->
-      radius = extra.board_size / 2
-      radius - radius * Math.sin(360 / extra.num_tiles * tile_index * Math.PI / 180)
-  )
-  .filter "tile_left", ->
-    (tile_index, extra) ->
-      radius = extra.board_size / 2
-      radius - radius * Math.cos(360 / extra.num_tiles * tile_index * Math.PI / 180)
   .filter "tile_style", ->
     (tile_index, extra) ->
       bgcolor = extra.bg_color

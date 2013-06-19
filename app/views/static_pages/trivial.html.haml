@@ -5,7 +5,7 @@
   %h1 Chusco Trivial
   #data
     .score
-      Score: {{ player.score || 0 }}
+      Score: {{ player.score || 0 }} {{ player.badges.length || 0 }}
     .badges
       {{ player.badges.length || 0 }} badges earned
       %ul
